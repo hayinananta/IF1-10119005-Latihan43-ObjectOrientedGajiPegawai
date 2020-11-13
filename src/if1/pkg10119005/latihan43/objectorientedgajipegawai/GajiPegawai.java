@@ -15,7 +15,7 @@ package if1.pkg10119005.latihan43.objectorientedgajipegawai;
  *                     Objek
  */
 public class GajiPegawai {
-  private String nama, alamat;
+    private String nama, alamat;
     private int uangTransport, uangTunjangan, gajiPokok, totalGaji;
     
     public String getNama() {
@@ -60,18 +60,24 @@ public class GajiPegawai {
     
     public int getTotalGaji() {
         return this.totalGaji;
-        
-    }   
+    }
+    
+    public void setTotalGaji(int totalGaji) {
+        this.totalGaji = totalGaji;
+    }
+    
+    public int totalGaji(int uangTunjangan, int uangTransport, int gajiPokok) {
+        return uangTunjangan + uangTransport + gajiPokok;
+    }
+    
     public void tampilData(String nama, String alamat, int uangTunjangan, int uangTransport, int gajiPokok, int totalGaji) {
         System.out.println("### Data Gaji Karyawan PT. KAKATU ###");
-        System.out.println("-------------------------------------");
-        System.out.println("Nama Karyawan: ".concat(nama));
-        System.out.println("Alamat: ".concat(alamat));
+        System.out.println("--------------------");
+        System.out.println("Nama Karyawan: " + nama);
+        System.out.println("Alamat: " + alamat);
         System.out.println("Uang Transport: Rp. " + uangTransport);
         System.out.println("Uang Tunjangan: Rp. " + uangTunjangan);
-        System.out.println("Gaji Pokok: Rp. " + gajiPokok);
-        System.out.println("TOTAL GAJI: Rp. " + totalGaji);
+        System.out.println("Gaji Pokok : Rp. " + gajiPokok);
+        System.out.println("TOTAL GAJI : Rp. " + totalGaji);
     }
 }
-
- 
